@@ -1,0 +1,25 @@
+{
+  "name": "cl-spawner",
+  "version": "0.0.1",
+  "description": "Manage Child Processes Which Created by Spawn and Provide Promisify Spawn.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/base.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LoveKino/cl-spawner.git"
+  },
+  "keywords": [
+    "spawn",
+    "promise",
+    "child",
+    "process"
+  ],
+  "author": "ddchen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LoveKino/cl-spawner/issues"
+  },
+  "homepage": "https://github.com/LoveKino/cl-spawner#readme"
+}
