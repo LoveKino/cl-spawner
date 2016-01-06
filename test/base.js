@@ -52,11 +52,11 @@ describe('base', function() {
             cwd: __dirname
         });
 
-        assert.equal(spawner.getChilds().length , 2);
+        assert.equal(spawner.getChilds().length, 2);
 
         var p3 = Promise.all([p1, p2]);
-        p3.then(function () {
-            assert.equal(spawner.getChilds().length , 0);
+        p3.then(function() {
+            assert.equal(spawner.getChilds().length, 0);
             done();
         });
     });
@@ -73,11 +73,15 @@ describe('base', function() {
 
         var childs = spawner.getChilds();
 
-        assert.equal(childs.length , 2);
+        assert.equal(childs.length, 2);
 
-        spawner.killAll().then(function () {
-            assert.equal(spawner.getChilds() , 0);
-            done();
+        spawner.killAll().then(function() {
+            assert.equal(spawner.getChilds(), 0);
+            // test twice calling
+            spawner.killAll().then(function() {
+                assert.equal(spawner.getChilds(), 0);
+                done();
+            });
         });
     });
 });
